@@ -1,1 +1,1 @@
-stre-front
+store-front

@@ -84,7 +84,7 @@ export class MyProfileComponent implements OnInit {
   	);
   }
 
-  
+
 
   onNewPayment() {
   	this.paymentService.newPayment(this.userPayment).subscribe(
@@ -206,7 +206,7 @@ export class MyProfileComponent implements OnInit {
     this.displayOrderDetail=true;
   }
 
-  
+
 
   ngOnInit() {
   	this.loginService.checkSession().subscribe(
@@ -231,7 +231,7 @@ export class MyProfileComponent implements OnInit {
         }
       );
 
-  	for (let s in AppConst.usStates) {
+  	for (let s in AppConst.regions) {
   		this.stateList.push(s);
   	}
 

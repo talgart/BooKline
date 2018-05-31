@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {Http, Headers} from '@angular/http';
-import {AppConst} from '../constants/app-const';
 import {Order} from '../models/order';
+import {AppConst} from '../constants/app-const'
 
 @Injectable()
 export class OrderService {

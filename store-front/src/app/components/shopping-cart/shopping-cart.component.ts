@@ -22,11 +22,11 @@ export class ShoppingCartComponent implements OnInit {
 	private notEnoughStock: boolean;
 
   constructor(
-  		private router:Router,
+  		private router: Router,
   		private cartService: CartService
   	) { }
 
-  onSelect(book:Book) {
+  onSelect(book: Book) {
   	this.selectedBook = book;
   	this.router.navigate(['/bookDetail', this.selectedBook.id]);
   }
@@ -48,47 +48,47 @@ export class ShoppingCartComponent implements OnInit {
   	this.cartService.updateCartItem(cartItem.id, cartItem.qty).subscribe(
   		res => {
   			console.log(res.text());
-  			this.cartItemUpdated=true;
+  			this.cartItemUpdated = true;
   			this.getShoppingCart();
   		},
   		error => {
   			console.log(error.text());
   		}
-  	)
+  	);
   }
 
   getCartItemList()  {
   	this.cartService.getCartItemList().subscribe(
   		res => {
-  			this.cartItemList=res.json();
+  			this.cartItemList = res.json();
   			this.cartItemNumber = this.cartItemList.length;
   		},
   		error => {
   			console.log(error.text());
   		}
-  	)
+  	);
   }
 
   getShoppingCart() {
   	this.cartService.getShoppingCart().subscribe(
   		res => {
   			console.log(res.json());
-  			this.shoppingCart=res.json();
+  			this.shoppingCart = res.json();
   		},
   		error => {
   			console.log(error.text());
   		}
-  	)
+  	);
   }
 
   onCheckout() {
-  	if(this.cartItemNumber==0) {
-  		this.emptyCart=true;
+  	if (this.cartItemNumber == 0) {
+  		this.emptyCart = true;
   	} else {
-  		for (let item of this.cartItemList) {
+  		for (const item of this.cartItemList) {
   			if (item.qty > item.book.inStockNumber) {
-  				console.log("not enough stock on some item");
-  				this.notEnoughStock=true;
+  				console.log('not enough stock on some item');
+  				this.notEnoughStock = true;
   				return;
   			}
   		}

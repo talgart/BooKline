@@ -29,11 +29,11 @@
 					<td>{{book.active}}</td>
 					<td>
 						<input hidden="hidden" name="id" />
-						<button mat-button (click)="openDialog(book)" value="delete"><span class="fa fa-times"></span> delete</button>
+						<button md-button (click)="openDialog(book)" value="delete"><span class="fa fa-times"></span> delete</button>
 					</td>
 				</tr>
 			</tbody>
 		</table>
 	</div>
-	<button mat-raised-button class="mat-warn" id="deleteSelected" (click)="removeSelectedBooks()">Delete Selected</button>
+	<button md-raised-button class="mat-warn" id="deleteSelected" (click)="removeSelectedBooks()">Delete Selected</button>
 </div>

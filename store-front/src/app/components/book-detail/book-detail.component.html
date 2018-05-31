@@ -8,7 +8,7 @@
         </div>
         <img src="../../../assets/image/wood.png" class="img-responsive right" style="position: absolute; margin-top: 90px; z-index: -2;" />
     </div>
-    <hr style="position: absolute;width:85%; height:6px; background-color: #333; z-index:-1; margin-top: -170px;" />
+    <hr style="position: absolute;width:70%; height:6px; background-color: #333; z-index:-1; margin-top: -170px;" />
     <div class="row">
         <div class="row" style="margin-top: 120px;">
             <div class="col-xs-3">
@@ -29,7 +29,7 @@
                         <p><strong>Category:</strong><span>{{book.category}}</span></p>
                         <p><strong><span>{{book.format}}</span>:</strong> <span>{{book.numberOfPages}}</span> pages</p>
                         <p><strong>ISBN:</strong> <span>{{book.isbn}}</span></p>
-                        <p><strong>Shipping Weight:</strong> <span>{{book.shippingWeight}}</span> ounces</p>
+                        <p><strong>Shipping Weight:</strong> <span>{{book.shippingWeight}}</span> kg</p>
                     </div>
                     <div class="col-xs-7">
                         <div class="panel panel-default" style="border-width:5px; margin-top:20px;">
@@ -53,7 +53,7 @@
             					<button md-raised-button [disabled]="book.inStockNumber==0" (click)="onAddToCart()" class="mat-primary">Add to Cart</button>
             				</div>
             			</div>
-            				
+
             			</div>
             		</div>
             	</div>

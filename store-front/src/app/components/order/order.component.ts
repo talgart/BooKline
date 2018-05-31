@@ -44,8 +44,8 @@ export class OrderComponent implements OnInit {
   private order:Order = new Order();
 
   constructor(
-  	private router:Router, 
-  	private cartService: CartService, 
+  	private router:Router,
+  	private cartService: CartService,
   	private shippingService: ShippingService,
   	private paymentService: PaymentService,
   	private checkoutService: CheckoutService
@@ -210,7 +210,7 @@ export class OrderComponent implements OnInit {
         }
         );
 
-      for (let s in AppConst.usStates) {
+      for (let s in AppConst.regions) {
         this.stateList.push(s);
       }
 
